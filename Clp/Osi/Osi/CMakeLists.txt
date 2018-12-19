@@ -102,6 +102,7 @@ if (NOT WIN32 OR MINGW)
   set_target_properties(libOsiCommonTests PROPERTIES PREFIX "")
 endif ()
 set_include_directories(libOsi)
+target_link_libraries(libOsi PUBLIC libCoinUtils)
 set_include_directories(libOsiCommonTests)
 
 install(TARGETS libOsi libOsiCommonTests 

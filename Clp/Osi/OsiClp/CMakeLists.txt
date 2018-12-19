@@ -28,6 +28,7 @@ if (NOT WIN32 OR MINGW)
   set_target_properties(libOsiClp PROPERTIES PREFIX "")
 endif ()
 set_include_directories(libOsiClp)
+target_link_libraries(libOsiClp PUBLIC libOsi libClp libCoinUtils)
 
 install(TARGETS libOsiClp 
         DESTINATION lib)

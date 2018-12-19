@@ -310,6 +310,7 @@ if (COIN_HAS_WSMP AND (NOT COIN_HAS_WSMP_LIBRARY_PATH STREQUAL "None"))
   link_directories(${COIN_HAS_WSMP_LIBRARY_PATH})
 endif ()
 set_include_directories(libClp)
+target_link_libraries(libClp PUBLIC libCoinUtils)
 
 if (ENABLE_SHARED_LIBRARIES)
   add_library(libClpSolver SHARED ${ClpSolver_SRC_LIST})
