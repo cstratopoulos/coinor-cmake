@@ -9,6 +9,7 @@ macro(set_include_directories TARGET)
   target_include_directories(${TARGET} BEFORE PRIVATE ${CMAKE_BINARY_DIR}/Clp/include)
   target_include_directories(${TARGET} BEFORE PRIVATE ${CMAKE_BINARY_DIR}/CoinUtils/include)
   target_include_directories(${TARGET} BEFORE PRIVATE ${CMAKE_BINARY_DIR}/Osi/include)
+  target_include_directories(${TARGET} PUBLIC ${Clp_DIR}/src/OsiClp)
 endmacro ()
 
 if (WIN32)

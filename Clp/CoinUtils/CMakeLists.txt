@@ -225,6 +225,7 @@ endif ()
 if (NOT WIN32 OR MINGW)
   set_target_properties(libCoinUtils PROPERTIES PREFIX "")
 endif ()
+target_include_directories(libCoinUtils PUBLIC ${CoinUtils_DIR}/src)
 target_include_directories(libCoinUtils BEFORE PRIVATE ${CMAKE_BINARY_DIR}/CoinUtils/include)
 
 if (COINUTILS_ENABLE_UNITTEST)
