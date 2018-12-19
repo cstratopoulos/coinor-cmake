@@ -1,7 +1,5 @@
 get_ac_init_version(${CMAKE_CURRENT_SOURCE_DIR}/configure.ac CLP)
 
-option(CLP_BUILD_EXAMPLES "Enable the building of examples" OFF)
-
 set(CLP_VERSION_MAJOR   "${CLP_MAJOR_VERSION}"  CACHE STRING "The CLP major version number")
 set(CLP_VERSION_MINOR   "${CLP_MINOR_VERSION}"  CACHE STRING "The CLP minor version number")
 set(CLP_VERSION_RELEASE "${CLP_PATCH_VERSION}"  CACHE STRING "The CLP patch version number")
